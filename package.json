@@ -43,9 +43,62 @@
     "url": "https://github.com/IonicaBizau/simple-pinecone-php/issues"
   },
   "blah": {
-    "installation_command": [{
-      "content": "composer require IonicaBizau/simple-pinecone-php",
-      "language": "shell"
-    }, "If you do not use composer, you can simply download the file `lib/pinecone.php` and include it in your project."]
+    "installation_command": [
+      {
+        "content": "composer require IonicaBizau/simple-pinecone-php",
+        "language": "shell"
+      },
+      "If you do not use composer, you can simply download the file `lib/pinecone.php` and include it in your project:",
+      {
+        "content": [
+          "<?php",
+          "  require \"pinecone.php\";",
+          "  $pinecone = new Pinecone(\"your api key\", \"https://your-host-url\");"
+        ]
+      }
+    ],
+    "example": [
+      {
+        "h2": "Example"
+      },
+      {
+        "code": {
+          "content": [
+            "<?php",
+            "  require \"pinecone.php\";",
+            "",
+            "  $pinecone = new Pinecone(PINECONE_API_KEY, PINECONE_HOST);",
+            "  $indexes = $pinecone->getRequest(\"https://api.pinecone.io/indexes\");",
+            "",
+            "  header(\"Content-Type: application/json\");",
+            "",
+            "  // List the vector IDs",
+            "  $vectorIds = $pinecone->getRequest(\"/vectors/list\", [",
+            "    \"namespace\" => \"example-namespace\"",
+            "  ]);",
+            "  echo json_encode($vectorIds);",
+            "",
+            "  // Upsert vector",
+            "  $text = \"Hello World\";",
+            "",
+            "  // Define the function to compute the embedding (via OpenAI etc)",
+            "  $embedding = getEmbedding($text);",
+            "  $vector = [",
+            "      'id' => md5($text),",
+            "      'values' => $embedding,",
+            "      'metadata' => [",
+            "          'title' => \"Example\"",
+            "      ]",
+            "  ];",
+            "",
+            "  // Upsert the vector",
+            "  $res = $pinecone->postRequest(\"/vectors/upsert\", [",
+            "      \"vectors\" => [$vector]",
+            "  ]);"
+          ],
+          "language": "php"
+        }
+      }
+    ]
   }
 }
