@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "version": "1.0.0",
-  "main": "lib/index.js",
+  "main": "lib/pinecone.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -41,5 +41,11 @@
   },
   "bugs": {
     "url": "https://github.com/IonicaBizau/simple-pinecone-php/issues"
+  },
+  "blah": {
+    "installation_command": [{
+      "content": "composer require IonicaBizau/simple-pinecone-php",
+      "language": "shell"
+    }, "If you do not use composer, you can simply download the file `lib/pinecone.php` and include it in your project."]
   }
 }
