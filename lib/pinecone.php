@@ -1,5 +1,7 @@
 <?php
 
+namespace IonicaBizau\SimplePineconePHP;
+
 class Pinecone {
     private $apiKey;
     private $hostUrl;
