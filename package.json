@@ -1,0 +1,45 @@
+{
+  "name": "simple-pinecone-php",
+  "description": "Access the Pinecone APIs thorugh PHP.",
+  "keywords": [
+    "simple",
+    "pinecone",
+    "php",
+    "access",
+    "the",
+    "apis",
+    "thorugh"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
+  "homepage": "https://github.com/IonicaBizau/simple-pinecone-php#readme",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js",
+    "index.d.ts",
+    "package-lock.json",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IonicaBizau/simple-pinecone-php.git"
+  },
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/simple-pinecone-php/issues"
+  }
+}
